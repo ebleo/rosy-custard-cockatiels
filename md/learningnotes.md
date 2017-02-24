@@ -80,11 +80,21 @@ Now, looking at the balls from where the villain is standing, they balls will lo
 
 ![and a curvy line...](http://i.imgur.com/gWdPX.png)
 
-Boring adults the call balls data, the stick a classifier, the biggest gap trick optimization, call flipping the table kernelling and the piece of paper a hyperplane.
+Boring adults the call 'balls' data, the 'stick' a classifier, the 'biggest gap trick' optimization, call 'flipping the table' kernelling and the piece of paper a hyperplane.
 
 ### [A cool classifier comparison][14]
 ![Comparison Table][classtable]
 Classification accuracy shown in bottom right of each plot.
+
+### Random Forests
+- [Read this][19]
+- Basically:
+  1. Divvy up data
+  1. Grow a tree for each part/chunk of data
+  1. Each tree gets a vote on feature importance (1 tree, 1 vote--or something similar)
+- *alternatively*, read [this][20]
+  - uses a friend/movie recommendation analogy
+
 
 ### Quick notes
 
@@ -98,6 +108,8 @@ Instance based learning relies on comparing new problems with instances seen in 
 Decision trees don't replicate the portions of categories that each entry falls into (like a certain amount o men vs. women surviving), they simply *make decisions* based on those factors as a sort of split point.
 - *Example*: The titanic decision tree says 67% to 23% female to male split--that doesn't mean that of the predicted females/males of a test data set would get that same survival ratio, it's just reflecting what the training indicates. It's a *tool for visualisation*, **not** the prediction itself. You just keep going along the splits based on where you fall, and the percentages show previously indicated likelihoods.
 
+#### [Multiple testing][16]
+Looking for testing multiple effects at once
 ***
 ### Some things not to forget
 - [latent variable][9]: variables that are inferred through direct observations(example: quality of life being inferred from health, employment, social belonging...)
@@ -108,12 +120,20 @@ Decision trees don't replicate the portions of categories that each entry falls 
   - Basically doing:
     - *this* `a_function(thisVal=5, n=6)`
     - **not** this `a_function(thisVal = 5, n = 6)`
-- Bias and variance have a relationship not dissimilar to accuracy and precision (read [here][darts])
-
+- *Bias* and *variance* have a relationship not dissimilar to accuracy and precision (read [here][darts])
+- [null hypothesis][17]: the statement that two variables is *not* relationship between two variables
+  - [r/eli5 post][eli5-1]
+- \mu_0 (*mu not*): population mean
+- **x-bar**: sample mean
+- [Domingos, P. (2012). A few useful things to know about machine learning. Communications of the ACM, 55(10), 78-87.Domingos, P. (2012). A few useful things to know about machine learning. Communications of the ACM, 55(10), 78-87.][18]
+  - [fraction 10^18 explained](http://stats.stackexchange.com/questions/226369/what-is-an-input-space-and-why-does-the-fraction-of-the-input-space-covered-by)
+    - (10^12 / 2 ^ 100) ~= 10 ^ - 18
+      - assuming all dims are binary (two categories/classifications per dim)
 ***
 ### Vocab
 **panacea**: a cureall  
 **disjunction**: lack of consistency
+**intractable**: hard to deal with
 
 <Reference>
 [1]: https://en.wikipedia.org/wiki/Salt_(cryptography)
@@ -131,6 +151,13 @@ Decision trees don't replicate the portions of categories that each entry falls 
 [13]: https://en.wikipedia.org/wiki/Multiclass_classification
 [14]: http://scikit-learn.org/stable/auto_examples/classification/plot_classifier_comparison.html
 [15]: https://en.wikipedia.org/wiki/Instance-based_learning
+[16]: http://www.stat.berkeley.edu/~mgoldman/Section0402.pdf
+[17]: https://en.wikipedia.org/wiki/Null_hypothesis
+[18]: http://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf
+[19]: https://www.quora.com/What-is-the-difference-between-random-forest-and-decision-tress
+[20]: http://blog.echen.me/2011/03/14/laymans-introduction-to-random-forests/
+
+[eli5-1]: https://www.reddit.com/r/explainlikeimfive/comments/31gmfr/eli5_what_is_the_danger_of_underpowered_stat_sig/
 
 [classtable]: http://scikit-learn.org/stable/_images/sphx_glr_plot_classifier_comparison_001.png "from scikit-learn page"
 [darts]: http://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf

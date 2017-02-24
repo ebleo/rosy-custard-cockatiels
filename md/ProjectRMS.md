@@ -50,6 +50,17 @@ Use a machine learning algorithm to provide recommendations
 - an API?
   - details [here][6]
   - and [there][7]
+##### Will this data be stored?
+- Why?
+- How?
+  - MySQL Database
+    - would need [connector][connect] for python
+      - [MySQLdb][ps1]
+        - one of the most popular
+      - [mysql.connector][ps2]
+        - [Instructions](https://dev.mysql.com/doc/connector-python/en/)
+      - [PyMySQL][ps3]
+        - "This package contains the pymysql module, which is written entirely in Python. It is designed to be a drop-in replacement for the MySQL-python package." [Source](https://www.a2hosting.com/kb/developer-corner/mysql/connecting-to-mysql-using-python)
 
 
 
@@ -75,3 +86,9 @@ Use a machine learning algorithm to provide recommendations
 [7]: https://schoolofdata.org/2013/11/18/web-apis-for-non-programmers/
 [8]: http://newcoder.io/Intro-Scrape/
 [9]: http://docs.python-guide.org/en/latest/scenarios/scrape/
+
+[ps1]: http://mysql-python.sourceforge.net/MySQLdb.html
+[ps2]: https://www.mysql.com/products/connector/
+[ps3]: https://github.com/PyMySQL/PyMySQL "Can be installed various ways"
+
+[connect]: https://www.a2hosting.com/kb/developer-corner/mysql/connecting-to-mysql-using-python "Quick look at 3 options"
