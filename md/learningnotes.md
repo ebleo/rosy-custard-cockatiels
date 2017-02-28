@@ -2,6 +2,7 @@
 #### Including  
 - computer science
 - python
+- SQL/mySQL
 - data science
 - various thing I might forget
 ***
@@ -43,7 +44,27 @@ Note: kind of like dot product but not really--similar in the combining the *i*-
 Example use of `repr()` [here][5]
 
 ### [Accessing a SQLite Database][6]
+***
+## SQL/mySQL
+### [mySQL][sql1]
+- Formatting
+  - Files must be input with UTF-8 incoding (when loading in data)
+    - Be sure to omit headers in data file(s)
+  - Be sure to remove special characters in data, or reformat them
 
+- Logging
+  - [syslog][sql2] (have yet to figure out this one)
+  - [General information][sql3]
+  - How I've been going about it
+    - have only had success with absolute paths
+    - have not tried relative paths
+  ``` sql
+  tee DRIVE:/MYFOLDER/MYPATH/myloggingfile.txt
+  ```
+  No quotation marks are needed when giving the path.
+- Linking
+  - Useful to reduce redunancy (think hierarchal data)
+  - [info][sql4]
 ***
 ## Data Science
 ### [Simplest Explanation of SVM's. Ever.][7]
@@ -156,6 +177,12 @@ Looking for testing multiple effects at once
 [18]: http://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf
 [19]: https://www.quora.com/What-is-the-difference-between-random-forest-and-decision-tress
 [20]: http://blog.echen.me/2011/03/14/laymans-introduction-to-random-forests/
+
+[sql1]: https://dev.mysql.com/doc/refman/5.7/en/ "Version 5.7"
+[sql2]: https://dev.mysql.com/doc/refman/5.7/en/mysql-command-options.html#option_mysql_syslog
+[sql3]: https://dev.mysql.com/doc/refman/5.7/en/mysql-logging.html
+[sql4]: http://www.brighthub.com/internet/web-development/articles/70816.aspx
+
 
 [eli5-1]: https://www.reddit.com/r/explainlikeimfive/comments/31gmfr/eli5_what_is_the_danger_of_underpowered_stat_sig/
 
