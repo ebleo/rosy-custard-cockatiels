@@ -43,7 +43,12 @@ Note: kind of like dot product but not really--similar in the combining the *i*-
 *Note*: if you want multiple interpreter-like outputs, you'll have to print each one (so far as I know)
 Example use of `repr()` [here][5]
 
+### scikit-learn
+**`shape`**: attribute of matrices; shape => (n_samples, n_features) -- see [here](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html)
+
 ### [Accessing a SQLite Database][6]
+- need a connector for python
+
 ***
 ## SQL/mySQL
 ### [mySQL][sql1]
@@ -67,7 +72,16 @@ Example use of `repr()` [here][5]
   - [info][sql4]
 ***
 ## Data Science
-### [Simplest Explanation of SVM's. Ever.][7]
+### Machine Learning
+#### Neural Networks
+- [eli5 explanation](https://www.reddit.com/r/explainlikeimfive/comments/24k3sb/eli5_neural_networks/)
+- [**Unsupervised**]()
+  - Doesn't have a target output, unlike *supervised*
+  - Weight on variable to another
+    - affect of features on each other's on/off status (assuming binary features)
+- **Supervised**
+
+#### [Simplest Explanation of SVM's. Ever.][7]
 From r/MachineLearning (alternatively, there's [*this*][8]...)
 We have 2 colors of balls on the table that we want to separate.
 
@@ -103,11 +117,11 @@ Now, looking at the balls from where the villain is standing, they balls will lo
 
 Boring adults the call 'balls' data, the 'stick' a classifier, the 'biggest gap trick' optimization, call 'flipping the table' kernelling and the piece of paper a hyperplane.
 
-### [A cool classifier comparison][14]
+#### [A cool classifier comparison][14]
 ![Comparison Table][classtable]
 Classification accuracy shown in bottom right of each plot.
 
-### Random Forests
+#### Random Forests
 - [Read this][19]
 - Basically:
   1. Divvy up data
@@ -131,9 +145,12 @@ Decision trees don't replicate the portions of categories that each entry falls 
 
 #### [Multiple testing][16]
 Looking for testing multiple effects at once
+
+#### Misc terms
+- **hypothesis space**: set of all hyp, that may be returned by ML alg
 ***
 ### Some things not to forget
-- [latent variable][9]: variables that are inferred through direct observations(example: quality of life being inferred from health, employment, social belonging...)
+- **[latent variable][9]**: variables that are inferred through direct observations(example: quality of life being inferred from health, employment, social belonging...)
 - [the difference of pearson correlation vs regression analysis][10]
 - [Why 'X' is uppercase and 'y' is lowercase][11]
   - Linear algebra. Uppcase denotes mtx, lowercase denotes vector.
@@ -142,19 +159,29 @@ Looking for testing multiple effects at once
     - *this* `a_function(thisVal=5, n=6)`
     - **not** this `a_function(thisVal = 5, n = 6)`
 - *Bias* and *variance* have a relationship not dissimilar to accuracy and precision (read [here][darts])
-- [null hypothesis][17]: the statement that two variables is *not* relationship between two variables
+- **[null hypothesis][17]**: the statement that two variables is *not* relationship between two variables
   - [r/eli5 post][eli5-1]
 - \mu_0 (*mu not*): population mean
 - **x-bar**: sample mean
-- [Domingos, P. (2012). A few useful things to know about machine learning. Communications of the ACM, 55(10), 78-87.Domingos, P. (2012). A few useful things to know about machine learning. Communications of the ACM, 55(10), 78-87.][18]
+- *[Domingos, P. (2012). A few useful things to know about machine learning. Communications of the ACM, 55(10), 78-87.Domingos, P. (2012). A few useful things to know about machine learning. Communications of the ACM, 55(10), 78-87.][18]*
   - [fraction 10^18 explained](http://stats.stackexchange.com/questions/226369/what-is-an-input-space-and-why-does-the-fraction-of-the-input-space-covered-by)
     - (10^12 / 2 ^ 100) ~= 10 ^ - 18
       - assuming all dims are binary (two categories/classifications per dim)
+  - a high dimensional orange has more surface area than volume
+    - [n dim SA/V](https://en.wikipedia.org/wiki/N-sphere#Volume_and_surface_area)
+    ![SA/V Table](https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/N_SpheresVolumeAndSurfaceArea.png/580px-N_SpheresVolumeAndSurfaceArea.png "Think of R = 1 case")  
+    The coeff for volume is decreasing with dims, meanwhile, the coeff for SA is increasing with dims
+  - [learner vs classifier](https://stats.stackexchange.com/questions/105564/what-is-the-difference-between-a-learner-and-classifier-in-supervised-learni?newreg=1164ed97c0a54565b92d1cb5014033a3)
+
 ***
 ### Vocab
 **panacea**: a cureall  
-**disjunction**: lack of consistency
-**intractable**: hard to deal with
+**disjunction**: lack of consistency  
+**intractable**: hard to deal with  
+**caveat emptor**: principle of buyer responsibility to check quality before buying  
+**amenable**: (*person*) easily persuaded or controlled; (*obj*) susceptable to  
+**a priori**: (*adv*) in a way based on theoretical deduction rather than empirical observation--[source](https://www.google.com/search?q=a+priori&rlz=1C1NHXL_enUS713US713&oq=a+priori&aqs=chrome..69i57j69i64l2&sourceid=chrome&ie=UTF-8)  
+**parity**: (*math*) even or odd; (*computing*) a function whose being even (or odd) provides a check on a set of binary values.
 
 <Reference>
 [1]: https://en.wikipedia.org/wiki/Salt_(cryptography)
