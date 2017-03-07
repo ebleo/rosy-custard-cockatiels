@@ -43,12 +43,45 @@ Note: kind of like dot product but not really--similar in the combining the *i*-
 *Note*: if you want multiple interpreter-like outputs, you'll have to print each one (so far as I know)
 Example use of `repr()` [here][5]
 
+[`try:`][pyf01]: A way to handle errors/exceptions  
+```python
+while True:
+    try:
+        x = int(input("Please enter a number: "))
+        break
+    except ValueError:
+        print("Oops!  That was no valid number.  Try again...")
+```
+> - First, the *try clause* (the statement(s) between the `try` and `except` keywords) is executed.
+- If no exception occurs, the *except clause* is skipped and execution of the `try` statement is finished.
+- If an exception occurs during execution of the try clause, the rest of the clause is skipped. Then if its type matches the exception named after the `except` keyword, the except clause is executed, and then execution continues after the `try` statement.
+- If an exception occurs which does not match the exception named in the except clause, it is passed on to outer `try` statements; if no handler is found, it is an *unhandled exception* and execution stops with a message as shown above.
+
+### Python Implementations
+cpython, pypy, iron python...all different *implementations* of python using Python the *programming language*
+- [good answer/explanation from stackoverflow](http://stackoverflow.com/questions/17130975/python-vs-cpython)
+
+### [plotly][plty01] (package)
+-  super coolbeans plot-sy stuff
+
+
 ### scikit-learn
 **`shape`**: attribute of matrices; shape => (n_samples, n_features) -- see [here](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html)
 
-### [Accessing a SQLite Database][6]
-- need a connector for python
+### [Accessing a (SQL) Database][6]
+This consists of two parts: **database driver** and **ORM** (Object-relational-mapping)
+- Database Driver
+  - looks like going with [PyMySQL](https://github.com/PyMySQL/PyMySQL)
+    - documentation [here](http://pymysql.readthedocs.io/en/latest/)
+  - this would be a driver to interact with the db
+- [ORM](https://en.wikipedia.org/wiki/Object-relational_mapping)
+  - helps with seemingly incompatible datatypes
+  - is a layer of abstraction
+  - used with a database driver
+  - s/o question [here](http://stackoverflow.com/questions/2550292/purpose-of-sqlalchemy-over-mysqldb "a quick comparison of db drivers and ORM's")
 
+### Using IPython
+Note: always need to include a `!` (bang) when using commands eg `!pip install PyMySQL`
 ***
 ## SQL/mySQL
 ### [mySQL][sql1]
@@ -74,8 +107,9 @@ Example use of `repr()` [here][5]
 ## Data Science
 ### Machine Learning
 #### Neural Networks
+- [overview, self taught learning](http://ufldl.stanford.edu/tutorial/selftaughtlearning/SelfTaughtLearning/)
 - [eli5 explanation](https://www.reddit.com/r/explainlikeimfive/comments/24k3sb/eli5_neural_networks/)
-- [**Unsupervised**]()
+- [**Unsupervised**](https://en.wikipedia.org/wiki/Unsupervised_learning)
   - Doesn't have a target output, unlike *supervised*
   - Weight on variable to another
     - affect of features on each other's on/off status (assuming binary features)
@@ -172,7 +206,7 @@ Looking for testing multiple effects at once
     ![SA/V Table](https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/N_SpheresVolumeAndSurfaceArea.png/580px-N_SpheresVolumeAndSurfaceArea.png "Think of R = 1 case")  
     The coeff for volume is decreasing with dims, meanwhile, the coeff for SA is increasing with dims
   - [learner vs classifier](https://stats.stackexchange.com/questions/105564/what-is-the-difference-between-a-learner-and-classifier-in-supervised-learni?newreg=1164ed97c0a54565b92d1cb5014033a3)
-
+- holding **CTRL** + **[up]/[down]** will swap bulleted points when writing Markdown in Atom
 ***
 ### Vocab
 **panacea**: a cureall  
@@ -211,11 +245,15 @@ Looking for testing multiple effects at once
 [sql4]: http://www.brighthub.com/internet/web-development/articles/70816.aspx
 
 
+
 [eli5-1]: https://www.reddit.com/r/explainlikeimfive/comments/31gmfr/eli5_what_is_the_danger_of_underpowered_stat_sig/
 
 [classtable]: http://scikit-learn.org/stable/_images/sphx_glr_plot_classifier_comparison_001.png "from scikit-learn page"
 [darts]: http://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf
 
+[pyf01]: https://docs.python.org/3/tutorial/errors.html#handling-exceptions
+
+[plty01]: https://plot.ly/python/big-data-analytics-with-pandas-and-sqlite/
 
 <Comments below>
 [//]: # (FOR WHATEVER REASON)
