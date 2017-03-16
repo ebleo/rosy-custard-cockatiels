@@ -24,6 +24,30 @@ Since the MD5 always returns a hash with a fixed byte amount, it is one way; the
 - another good explaination [here](https://code.tutsplus.com/tutorials/understanding-hash-functions-and-keeping-passwords-safe--net-17577) (the explanation is from a PHP pov)  
 
 In order to create hashes that are harder to crack, you can add [salt][1]  
+
+- Cool web book for [python][cs05]
+
+#### Programming Paradigms
+- [comparison of paradigms in python][cs04]
+- [eli5 from r/learningprogramming ][cs01]
+- [from r/ELI5][cs02]
+- [functional programming vs object oriented][cs03]
+  - **FP** must pass value to modify as well as data the values are associated with (if you have employee data, `[Bob, 1000.00]` then you have to pass the entire entry `[name, pay]`)
+  - **OOP** can modify an attribute of an object with a method `Bob.promo = raise`
+    - if the data has multiple attributes you can modify one by specifying an attribute vs accessing the entire entry of data
+  - FP typically creates a copy we store in another variable--original data untouched!--whereas OOP modifies an attribute
+    - can be complicated for OOP since values will change if attribute or method is called, whereas FP values remain same and we work with new variables going fwd
+
+[cs01]: https://www.reddit.com/r/learnprogramming/comments/4hxth7/eli5_the_difference_between_objectoriented/
+[cs02]: https://www.reddit.com/r/explainlikeimfive/comments/1azb6v/eli5_the_different_paradigms_of_programming/
+[cs03]: http://www.codenewbie.org/blogs/object-oriented-programming-vs-functional-programming
+[cs04]: https://blog.newrelic.com/2015/04/01/python-programming-styles/
+[cs05]: http://pymbook.readthedocs.io/en/latest/index.html
+
+
+
+
+
 ***
 ## Python Topics/Functions
 [**`zip()`**][3]: takes two iterables (iterables meaning something that can be iterated over, like a list), goes through both taking and combining the *i*-th element of each and forms a tuple of *i*-th iterable. Repeats until end of shortest iterable is reached.  
@@ -74,11 +98,16 @@ This consists of two parts: **database driver** and **ORM** (Object-relational-m
   - looks like going with [PyMySQL](https://github.com/PyMySQL/PyMySQL)
     - documentation [here](http://pymysql.readthedocs.io/en/latest/)
   - this would be a driver to interact with the db
+  - another popular flavor of DBAPI [MySQLdb](http://docs.sqlalchemy.org/en/rel_1_1/dialects/mysql.html)
+    - MySQL-Python in PyPI
+    - [Installation](http://mysql-python.blogspot.com/2012/11/is-mysqldb-hard-to-install.html)
 - [ORM](https://en.wikipedia.org/wiki/Object-relational_mapping)
   - helps with seemingly incompatible datatypes
   - is a layer of abstraction
   - used with a database driver
   - s/o question [here](http://stackoverflow.com/questions/2550292/purpose-of-sqlalchemy-over-mysqldb "a quick comparison of db drivers and ORM's")
+### SQLAlchemy
+- [`flush()` vs `commit()`](http://skien.cc/blog/2014/02/06/sqlalchemy-and-race-conditions-follow-up/)
 
 ### Using IPython
 Note: always need to include a `!` (bang) when using commands eg `!pip install PyMySQL`
@@ -216,6 +245,7 @@ Looking for testing multiple effects at once
 **amenable**: (*person*) easily persuaded or controlled; (*obj*) susceptable to  
 **a priori**: (*adv*) in a way based on theoretical deduction rather than empirical observation--[source](https://www.google.com/search?q=a+priori&rlz=1C1NHXL_enUS713US713&oq=a+priori&aqs=chrome..69i57j69i64l2&sourceid=chrome&ie=UTF-8)  
 **parity**: (*math*) even or odd; (*computing*) a function whose being even (or odd) provides a check on a set of binary values.
+**instantiation**: instantiation is creation of a thing that can do stuff; initiation is stuff that gets done [*source*](http://stackoverflow.com/questions/2330767/what-is-the-difference-between-instantiated-and-initialized)
 
 <Reference>
 [1]: https://en.wikipedia.org/wiki/Salt_(cryptography)
