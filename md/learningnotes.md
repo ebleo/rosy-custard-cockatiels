@@ -95,10 +95,10 @@ cpython, pypy, iron python...all different *implementations* of python using Pyt
 ### [Accessing a (SQL) Database][6]
 This consists of two parts: **database driver** and **ORM** (Object-relational-mapping)
 - Database Driver
+  - this would be a driver to interact with the db
   - looks like going with [PyMySQL](https://github.com/PyMySQL/PyMySQL)
     - documentation [here](http://pymysql.readthedocs.io/en/latest/)
-  - this would be a driver to interact with the db
-  - another popular flavor of DBAPI [MySQLdb](http://docs.sqlalchemy.org/en/rel_1_1/dialects/mysql.html)
+  - another popular flavor of DBAPI [**MySQLdb**](http://docs.sqlalchemy.org/en/rel_1_1/dialects/mysql.html)
     - MySQL-Python in PyPI
     - [Installation](http://mysql-python.blogspot.com/2012/11/is-mysqldb-hard-to-install.html)
 - [ORM](https://en.wikipedia.org/wiki/Object-relational_mapping)
@@ -108,9 +108,15 @@ This consists of two parts: **database driver** and **ORM** (Object-relational-m
   - s/o question [here](http://stackoverflow.com/questions/2550292/purpose-of-sqlalchemy-over-mysqldb "a quick comparison of db drivers and ORM's")
 ### SQLAlchemy
 - [`flush()` vs `commit()`](http://skien.cc/blog/2014/02/06/sqlalchemy-and-race-conditions-follow-up/)
+- [tips](http://alextechrants.blogspot.com/2013/11/10-common-stumbling-blocks-for.html)
+- useful data on SQLAlchemy/MySQL interaction [here](http://docs.sqlalchemy.org/en/rel_1_1/core/sqlelement.html#sqlalchemy.sql.expression.ColumnElement.label)
+  - and [here](http://docs.sqlalchemy.org/en/rel_1_1/orm/query.html#sqlalchemy.orm.aliased)
+  - [also](http://docs.sqlalchemy.org/en/rel_1_1/core/tutorial.html?highlight=limit%20offset#ordering-grouping-limiting-offset-ing)
 
 ### Using IPython
 Note: always need to include a `!` (bang) when using commands eg `!pip install PyMySQL`
+
+
 ***
 ## SQL/mySQL
 ### [mySQL][sql1]
@@ -132,6 +138,8 @@ Note: always need to include a `!` (bang) when using commands eg `!pip install P
 - Linking
   - Useful to reduce redunancy (think hierarchal data)
   - [info][sql4]
+
+
 ***
 ## Data Science
 ### Machine Learning
