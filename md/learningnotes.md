@@ -59,8 +59,8 @@ In order to create hashes that are harder to crack, you can add [salt][1]
 >>> list(zipped)
 [(1, 4), (2, 5), (3, 6)]
 ```  
-The *i*-th element of each list `x , y` is present since both lists are the same length.
-
+The *i*-th element of each list `x , y` is present since both lists are the same length.  
+*to **unzip**, you can use* `zip(*list)` *where* `list` *is a list object--to unzip; you may only unzip lists*  
 Note: kind of like dot product but not really--similar in the combining the *i*-th element, but not much else.
 
 [`repr()`][4]: There are [multiple methods of printing][5] to the console; while `print()` and `write()` give more human readable outputs, `repr()` gives output that can be read by an interpreter--it looks more like the output you would get after running a function in the command line  
@@ -81,6 +81,10 @@ while True:
 - If an exception occurs during execution of the try clause, the rest of the clause is skipped. Then if its type matches the exception named after the `except` keyword, the except clause is executed, and then execution continues after the `try` statement.
 - If an exception occurs which does not match the exception named in the except clause, it is passed on to outer `try` statements; if no handler is found, it is an *unhandled exception* and execution stops with a message as shown above.
 
+#### `statistics`
+Built in python module with functions such as:
+- `median()`
+
 ### Python Implementations
 cpython, pypy, iron python...all different *implementations* of python using Python the *programming language*
 - [good answer/explanation from stackoverflow](http://stackoverflow.com/questions/17130975/python-vs-cpython)
@@ -88,9 +92,29 @@ cpython, pypy, iron python...all different *implementations* of python using Pyt
 ### [plotly][plty01] (package)
 -  super coolbeans plot-sy stuff
 
+### Pandas - data storage methods ... sort of ...
+- [`.loc()` vs `.iloc`][pd01] (labels vs ints)
+
+[pd01]: http://pandas.pydata.org/pandas-docs/stable/indexing.html#different-choices-for-indexing
 
 ### scikit-learn
-**`shape`**: attribute of matrices; shape => (n_samples, n_features) -- see [here](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html)
+**`shape`**: attribute of matrices; shape => (n_samples, n_features) -- see [here](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html)  
+**`SVM`**: Support Vector Machines
+- [Soft or hard margins][sk03]
+- **`SVC`**: [documentation][sk01]
+  - C value [notes][sk02]
+  - [kernel][sk04]
+
+
+[sk01]: http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
+[sk02]: https://www.quora.com/What-are-C-and-gamma-with-regards-to-a-support-vector-machine
+[sk03]: http://stackoverflow.com/a/4630731
+[sk04]: https://en.wikipedia.org/wiki/Kernel_(statistics)
+
+### Matplotlib
+- [Multiple Plots][plt01]
+
+[plt01]: http://matplotlib.org/users/gridspec.html
 
 ### [Accessing a (SQL) Database][6]
 This consists of two parts: **database driver** and **ORM** (Object-relational-mapping)
@@ -116,6 +140,7 @@ This consists of two parts: **database driver** and **ORM** (Object-relational-m
 ### Using IPython
 Note: always need to include a `!` (bang) when using commands eg `!pip install PyMySQL`
 
+### [Online cloud compiler](https://repl.it/languages/python3)
 
 ***
 ## SQL/mySQL
@@ -143,6 +168,10 @@ Note: always need to include a `!` (bang) when using commands eg `!pip install P
 ***
 ## Data Science
 ### Machine Learning
+#### Data sources
+- [here][ds01]
+
+[ds01]: http://stats.stackexchange.com/questions/169450/what-are-some-good-datasets-to-learn-basic-machine-learning-algorithms-and-why
 #### Neural Networks
 - [overview, self taught learning](http://ufldl.stanford.edu/tutorial/selftaughtlearning/SelfTaughtLearning/)
 - [eli5 explanation](https://www.reddit.com/r/explainlikeimfive/comments/24k3sb/eli5_neural_networks/)
@@ -191,6 +220,8 @@ Boring adults the call 'balls' data, the 'stick' a classifier, the 'biggest gap 
 #### [A cool classifier comparison][14]
 ![Comparison Table][classtable]
 Classification accuracy shown in bottom right of each plot.
+![Classifier Flow][classmap]
+- [How to choose a classifier](http://scikit-learn.org/stable/tutorial/machine_learning_map/index.html)--with links to docs
 
 #### Random Forests
 - [Read this][19]
@@ -216,6 +247,11 @@ Decision trees don't replicate the portions of categories that each entry falls 
 
 #### [Multiple testing][16]
 Looking for testing multiple effects at once
+
+#### Cross Validation
+- [stratified vs. not][xv01]
+
+[xv01]: http://stats.stackexchange.com/questions/49540/understanding-stratified-cross-validation/72993#72993
 
 #### Misc terms
 - **hypothesis space**: set of all hyp, that may be returned by ML alg
@@ -254,6 +290,7 @@ Looking for testing multiple effects at once
 **a priori**: (*adv*) in a way based on theoretical deduction rather than empirical observation--[source](https://www.google.com/search?q=a+priori&rlz=1C1NHXL_enUS713US713&oq=a+priori&aqs=chrome..69i57j69i64l2&sourceid=chrome&ie=UTF-8)  
 **parity**: (*math*) even or odd; (*computing*) a function whose being even (or odd) provides a check on a set of binary values.
 **instantiation**: instantiation is creation of a thing that can do stuff; initiation is stuff that gets done [*source*](http://stackoverflow.com/questions/2330767/what-is-the-difference-between-instantiated-and-initialized)
+**imperious**: assuming power or authority without justification; arrogant and domineering [source](https://www.google.com/search?q=imperious&rlz=1C1NHXL_enUS713US713&oq=imperious&aqs=chrome..69i57j69i60l3.1189j0j7&sourceid=chrome&ie=UTF-8)
 
 <Reference>
 [1]: https://en.wikipedia.org/wiki/Salt_(cryptography)
@@ -288,6 +325,7 @@ Looking for testing multiple effects at once
 
 [classtable]: http://scikit-learn.org/stable/_images/sphx_glr_plot_classifier_comparison_001.png "from scikit-learn page"
 [darts]: http://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf
+[classmap]: http://scikit-learn.org/stable/_static/ml_map.png
 
 [pyf01]: https://docs.python.org/3/tutorial/errors.html#handling-exceptions
 

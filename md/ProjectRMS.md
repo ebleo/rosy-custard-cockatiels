@@ -50,6 +50,7 @@ Use a machine learning algorithm to provide recommendations
 - an API?
   - details [here][6]
   - and [there][7]
+  - [tutorial][10]
 ##### Will this data be stored?
 - Why?
 - How?
@@ -86,6 +87,7 @@ Use a machine learning algorithm to provide recommendations
 [7]: https://schoolofdata.org/2013/11/18/web-apis-for-non-programmers/
 [8]: http://newcoder.io/Intro-Scrape/
 [9]: http://docs.python-guide.org/en/latest/scenarios/scrape/
+[10]: https://www.codecademy.com/pt/courses/python-intermediate-en-6zbLp/0/1?curriculum_id=50ecb8cb058fd2ebda00003b
 
 [ps1]: http://mysql-python.sourceforge.net/MySQLdb.html
 [ps2]: https://www.mysql.com/products/connector/
